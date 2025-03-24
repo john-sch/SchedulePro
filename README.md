@@ -72,7 +72,3 @@ SchedulePro is a scheduling application built with FastAPI for managing events. 
 - **Data Storage:** Recurring days are stored using SQLAlchemy’s PickleType for simplicity. A normalized approach would be preferable in a production environment.
 - **Migrations:** The database schema is created on startup without migrations.
 
-## Public Repository
-
-The complete source code is available at:  
-[https://github.com/john-sch/SchedulePro](https://github.com/john-sch/SchedulePro)
