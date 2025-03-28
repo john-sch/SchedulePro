@@ -1,6 +1,6 @@
 # SchedulePro
 
-SchedulePro is a scheduling application built with FastAPI for managing events. It supports creating, updating, retrieving, and deleting scheduled events, including recurring events with conflict detection.
+SchedulePro is a scheduling application built with FastAPI and an integrated React dashboard for managing events. It supports creating, updating, retrieving, and deleting scheduled events—including recurring events with conflict detection.
 
 ## Features
 
@@ -15,6 +15,7 @@ SchedulePro is a scheduling application built with FastAPI for managing events. 
 - Alternatively, Python 3.8+ and Git if running locally
 
 ## Running with Docker
+This project uses a multi-stage Dockerfile to build the React frontend and then package the FastAPI backend along with the built static files. Use the following commands to build and run the Docker container:
 
 1. **Build the Docker image**
 
@@ -29,6 +30,8 @@ SchedulePro is a scheduling application built with FastAPI for managing events. 
    \`\`\`
 
    The API will be available at [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
+   API: http://127.0.0.1:8000
+   Dashboard: http://127.0.0.1:8000/dashboard
 
 3. **Interactive API Documentation**
 
@@ -71,4 +74,3 @@ SchedulePro is a scheduling application built with FastAPI for managing events. 
 - **Persistence:** The application uses SQLite for simplicity. In production, a more robust database (e.g., PostgreSQL) should be used.
 - **Data Storage:** Recurring days are stored using SQLAlchemy’s PickleType for simplicity. A normalized approach would be preferable in a production environment.
 - **Migrations:** The database schema is created on startup without migrations.
-
